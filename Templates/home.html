@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <h1>EMPLOYEE</h1>
+
+        <table border="3">
+            <tr>
+                <th>EMPLOYEE NAME</th>
+                <th>EMPLOYEE EMAIL</th>
+                <th>EMPLOYEE PHONE</th>
+                <th>EMPLOYEE DEPARTMENT</th>
+            </tr>
+
+            {% for x in data %}
+            <tr>
+                <td>{{x.name}}</td>
+                <td>{{x.email}}</td>
+                <td>{{x.phone}}</td>
+                <td>{{x.department}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+
+        <br><br><br><br><br><br><br><br><br><br>
+        <hr>
+  
+
+        <form action="" method="post">
+            {% csrf_token %}
+
+            {{ form.as_p }}
+
+            <input type="submit" value="submit">
+        </form>
+    </body>
+</html>
