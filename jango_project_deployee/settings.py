@@ -80,7 +80,7 @@ WSGI_APPLICATION = 'jango_project_deployee.wsgi.application'
 #     }
 # }
 
-import os
+
 import os 
 if os.environ.get("RENDER"): 
     # Production (Render + Aiven) 
@@ -100,7 +100,7 @@ else:
     DATABASES = { 
         "default": { 
             "ENGINE": "django.db.backends.mysql", 
-            "NAME": "djnago_project_deployee", 
+            "NAME": "djnago_project_deployee",
             "USER": "root", 
             "PASSWORD": "charan@261103", 
             "HOST": "localhost", 
